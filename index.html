@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TEK LEK — Son sans limites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="bg-particles"></canvas>
+
+<nav class="navbar">
+  <div class="logo">TEK<span>LEK</span></div>
+  <ul class="nav-links">
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#features">Fonctions</a></li>
+    <li><a href="#colors">Couleurs</a></li>
+    <li><a href="#specs">Specs</a></li>
+    <li><a href="#buy">Acheter</a></li>
+  </ul>
+  <a href="#buy" class="btn btn-small">Commander</a>
+</nav>
+
+<header id="hero" class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="tagline">NOUVELLE GÉNÉRATION</p>
+    <h1>TEK LEK <span class="grad">PRO</span></h1>
+    <p class="subtitle">Une immersion sonore totale. Design 3D sculpté, autonomie infinie, silence absolu.</p>
+    <div class="hero-buttons">
+      <a href="#buy" class="btn btn-primary">Découvrir — 79€</a>
+      <a href="#features" class="btn btn-ghost">En savoir plus ↓</a>
+    </div>
+  </div>
+  <div id="model-container" class="model-container">
+    <div id="loader" class="loader">Chargement du modèle 3D…</div>
+  </div>
+  <div class="scroll-hint">Glissez pour faire pivoter ↻</div>
+</header>
+
+<section id="features" class="features">
+  <h2 class="section-title">Pensé dans <span class="grad">chaque détail</span></h2>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🔇</div>
+      <h3>Réduction de bruit active</h3>
+      <p>Annulation intelligente du bruit ambiant jusqu'à -42dB pour une immersion totale.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔋</div>
+      <h3>36h d'autonomie</h3>
+      <p>Boîtier de charge longue durée + charge rapide sans fil intégrée.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>Résistant IPX5</h3>
+      <p>Sport, pluie, transpiration — vos écouteurs encaissent tout.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎧</div>
+      <h3>Son Hi-Fi spatial</h3>
+      <p>Audio spatial dynamique avec basses profondes et aigus cristallins.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Latence ultra faible</h3>
+      <p>Mode gaming à 45ms pour une synchro parfaite audio/vidéo.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🖐️</div>
+      <h3>Contrôle tactile</h3>
+      <p>Gestes intuitifs pour gérer musique, appels et assistant vocal.</p>
+    </div>
+  </div>
+</section>
+
+<section id="colors" class="colors">
+  <h2 class="section-title">Choisissez <span class="grad">votre style</span></h2>
+  <p class="section-sub">Faites pivoter le modèle 3D et changez la couleur en direct.</p>
+  <div class="color-swatches">
+    <button class="swatch active" style="--c:#f5f5f7" data-color="#f5f5f7" data-name="Blanc Nuage"></button>
+    <button class="swatch" style="--c:#1c1c1e" data-color="#1c1c1e" data-name="Noir Onyx"></button>
+    <button class="swatch" style="--c:#0a84ff" data-color="#0a84ff" data-name="Bleu Électrique"></button>
+    <button class="swatch" style="--c:#ff375f" data-color="#ff375f" data-name="Rouge Pulse"></button>
+    <button class="swatch" style="--c:#30d158" data-color="#30d158" data-name="Vert Néon"></button>
+    <button class="swatch" style="--c:#bf5af2" data-color="#bf5af2" data-name="Violet Cosmos"></button>
+  </div>
+  <p class="color-name" id="color-name">Blanc Nuage</p>
+</section>
+
+<section id="specs" class="specs">
+  <h2 class="section-title">Caractéristiques <span class="grad">techniques</span></h2>
+  <div class="specs-grid">
+    <div class="spec"><span>Bluetooth</span><strong>5.3</strong></div>
+    <div class="spec"><span>Autonomie écouteurs</span><strong>9h</strong></div>
+    <div class="spec"><span>Autonomie boîtier</span><strong>+27h</strong></div>
+    <div class="spec"><span>Charge rapide</span><strong>10min = 2h</strong></div>
+    <div class="spec"><span>Poids</span><strong>4.5g / écouteur</strong></div>
+    <div class="spec"><span>Étanchéité</span><strong>IPX5</strong></div>
+    <div class="spec"><span>Driver</span><strong>11mm dynamique</strong></div>
+    <div class="spec"><span>Connexion</span><strong>Multipoint x2</strong></div>
+  </div>
+</section>
+
+<section id="buy" class="buy">
+  <div class="buy-glow"></div>
+  <h2>Prêt à passer au <span class="grad">niveau supérieur</span> ?</h2>
+  <p>Livraison gratuite • Garantie 2 ans • Retour sous 30 jours</p>
+  <div class="price-box">
+    <span class="old-price">119€</span>
+    <span class="new-price">79€</span>
+  </div>
+  <a href="#" class="btn btn-primary btn-large">Commander maintenant</a>
+</section>
+
+<footer class="footer">
+  <div class="logo">TEK<span>LEK</span></div>
+  <p>© 2026 TEK LEK. Tous droits réservés.</p>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="scene.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
