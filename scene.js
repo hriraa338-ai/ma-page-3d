@@ -7,8 +7,8 @@ const loader = document.getElementById('loader');
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(35, container.clientWidth / container.clientHeight, 0.1, 100);
-camera.position.set(0, 1.2, 6.5);
+const camera = new THREE.PerspectiveCamera(32, container.clientWidth / container.clientHeight, 0.1, 100);
+camera.position.set(0, 2.2, 8.6);
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -101,13 +101,13 @@ function buildCase(color = 0xf5f5f7) {
   }
 
   const budLeft = buildEarbud();
-  budLeft.position.set(-0.62, 0.55, 0.05);
-  budLeft.rotation.z = 0.08;
+  budLeft.position.set(-0.55, 0.45, 0.55);
+  budLeft.rotation.set(0.3, 0.15, 0.1);
   group.add(budLeft);
 
   const budRight = buildEarbud();
-  budRight.position.set(0.5, -0.32, -0.1);
-  budRight.rotation.set(0.1, 0.3, -0.05);
+  budRight.position.set(0.45, 0.45, 0.6);
+  budRight.rotation.set(0.3, -0.15, -0.1);
   group.add(budRight);
 
   group.userData.lidPivot = lidPivot;
@@ -119,8 +119,8 @@ buildCase();
 
 loader.style.display = 'none';
 
-group.rotation.set(0.15, -0.5, 0);
-group.scale.setScalar(1.35);
+group.rotation.set(0, -0.4, 0);
+group.scale.setScalar(1.1);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
