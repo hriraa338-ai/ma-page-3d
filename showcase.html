@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TEK LEK — Showcase 3D & Néon</title>
+<meta name="description" content="Page vitrine premium : 3D temps réel, néon, glassmorphism et animations." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="showcase.css" />
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true"></div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav" aria-label="Navigation principale">
+  <a class="brand" href="#top" aria-label="TEK LEK — accueil">
+    <span class="mark" aria-hidden="true"></span>TEK<span>LEK</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#capabilities">Capacités</a></li>
+    <li><a href="#stats">Chiffres</a></li>
+    <li><a href="#studio">Studio</a></li>
+    <li><a href="#start">Commencer</a></li>
+  </ul>
+  <a href="#start" class="btn btn-primary" style="--pad:10px 20px;">Lancer la démo</a>
+</nav>
+
+<main class="wrap" id="top">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Showcase · 3D temps réel</span>
+      <h1 class="reveal" data-delay="1">
+        Du son <span class="grad-text glow">sculpté</span><br>en pleine lumière.
+      </h1>
+      <p class="lead reveal" data-delay="2">
+        Une vitrine immersive propulsée par WebGL : objet 3D interactif,
+        dégradés néon animés, glassmorphism et micro-interactions soignées.
+        Faites tourner, survolez, explorez.
+      </p>
+      <div class="hero-actions reveal" data-delay="3">
+        <a href="#studio" class="btn btn-primary">
+          Explorer le studio
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#capabilities" class="btn btn-ghost">Voir les capacités</a>
+      </div>
+    </div>
+
+    <div class="hero-stage">
+      <div class="stage-ring" aria-hidden="true"></div>
+      <canvas id="showcase-canvas" aria-label="Objet 3D interactif en rotation" role="img"></canvas>
+    </div>
+  </header>
+</main>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span>WebGL</span><span>Three.js</span><span>Glassmorphism</span><span>Néon</span>
+    <span>Scroll Reveal</span><span>Glow FX</span><span>Bento Grid</span><span>Accessibilité</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- CAPABILITIES (bento) -->
+  <section class="section" id="capabilities">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Ce que cette page démontre</span>
+      <h2>Des effets premium, <span class="grad-text">pensés pour convertir.</span></h2>
+      <p>Chaque bloc est une démonstration concrète de technique d'interface moderne.</p>
+    </div>
+
+    <div class="bento">
+      <article class="tile wide tall reveal">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Rendu 3D temps réel</h3>
+        <p>Maillage éclairé par trois sources colorées, anti-aliasing et rotation amortie. Le tout en WebGL natif, sans dépendance lourde.</p>
+      </article>
+
+      <article class="tile magenta reveal" data-delay="1">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-3 7h6l-5 13 2-9H7l3-11Z"/></svg>
+        </div>
+        <h3>Glow néon</h3>
+        <p>Halos lumineux en CSS pur via <code>box-shadow</code> et <code>text-shadow</code>.</p>
+      </article>
+
+      <article class="tile violet reveal" data-delay="2">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Bento layout</h3>
+        <p>Grille modulaire façon Apple, responsive jusqu'au mobile.</p>
+      </article>
+
+      <article class="tile reveal" data-delay="1">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.6"/><path d="M21 3v6h-6"/></svg>
+        </div>
+        <h3>Scroll reveal</h3>
+        <p>Apparition échelonnée via IntersectionObserver, désactivée si l'utilisateur préfère moins d'animations.</p>
+      </article>
+
+      <article class="tile reveal" data-delay="2">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg>
+        </div>
+        <h3>Curseur lumineux</h3>
+        <p>Un halo réactif suit la souris sur chaque carte, en GPU (transform/opacity).</p>
+      </article>
+
+      <article class="tile wide reveal" data-delay="3">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 3v9h9"/></svg>
+        </div>
+        <h3>Compteurs animés</h3>
+        <p>Les chiffres s'incrémentent à l'entrée du viewport pour ancrer la preuve sociale.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section" id="stats" style="padding-top:0;">
+    <div class="stats reveal">
+      <div class="stat"><div class="val grad-text" data-count="67" data-suffix="">0</div><div class="label">Styles UI</div></div>
+      <div class="stat"><div class="val grad-text" data-count="161" data-suffix="">0</div><div class="label">Palettes</div></div>
+      <div class="stat"><div class="val grad-text" data-count="60" data-suffix="fps">0</div><div class="label">Rendu fluide</div></div>
+      <div class="stat"><div class="val grad-text" data-count="100" data-suffix="%">0</div><div class="label">Responsive</div></div>
+    </div>
+  </section>
+
+  <!-- STUDIO / color switcher -->
+  <section class="section" id="studio">
+    <div class="switcher">
+      <div>
+        <span class="eyebrow reveal"><span class="dot" aria-hidden="true"></span>Studio temps réel</span>
+        <h2 class="reveal" data-delay="1" style="font-family:var(--font-head);font-weight:700;font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.02em;margin:18px 0 14px;line-height:1.08;">
+          Changez l'ambiance <span class="grad-text">à la volée.</span>
+        </h2>
+        <p class="reveal" data-delay="2" style="color:var(--text-muted);">
+          Choisissez un accent : l'objet 3D et l'aperçu se synchronisent instantanément.
+          C'est l'interactivité qui crée le sentiment d'appartenance.
+        </p>
+        <div class="swatches reveal" data-delay="3" role="group" aria-label="Choix de couleur d'accent">
+          <button class="swatch" style="--c:#00e5ff" data-accent="#00e5ff" aria-label="Cyan" aria-pressed="true"></button>
+          <button class="swatch" style="--c:#ff2e97" data-accent="#ff2e97" aria-label="Magenta" aria-pressed="false"></button>
+          <button class="swatch" style="--c:#a855f7" data-accent="#a855f7" aria-label="Violet" aria-pressed="false"></button>
+          <button class="swatch" style="--c:#aaff00" data-accent="#aaff00" aria-label="Citron vert" aria-pressed="false"></button>
+          <button class="swatch" style="--c:#ff6a00" data-accent="#ff6a00" aria-label="Orange" aria-pressed="false"></button>
+        </div>
+      </div>
+      <div class="switch-preview reveal" data-delay="2" id="preview">
+        <div class="orb" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal" id="start">
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Prêt à construire</span>
+    <h2>Et si <span class="grad-text">votre prochain site</span><br>avait cet impact ?</h2>
+    <p>Cette page entière est statique, légère et accessible. Aucune magie cachée — juste les bons détails.</p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a href="index.html" class="btn btn-primary">Voir le produit TEK LEK</a>
+      <a href="#top" class="btn btn-ghost">Remonter en haut</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="brand"><span class="mark" aria-hidden="true"></span>TEK<span>LEK</span></div>
+    <p>© 2026 TEK LEK — Démo showcase. Construite avec WebGL &amp; CSS.</p>
+  </footer>
+
+</main>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+<script type="module" src="showcase.js"></script>
+</body>
+</html>
