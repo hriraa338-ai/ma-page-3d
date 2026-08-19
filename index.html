@@ -1,135 +1,241 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TEK LEK — Son sans limites</title>
+<title>snoop Studio — Architecture &amp; Design, New York</title>
+<meta name="description" content="snoop Studio is a modern architecture and design studio based in New York City. Minimal. Modern. Meaningful." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add('js-reveal');</script>
 </head>
 <body>
 
-<canvas id="bg-particles"></canvas>
+<nav class="navbar" id="navbar">
+  <a href="#top" class="logo">
+    <span class="logo-mark">s.</span>
+    <span class="logo-text">snoop <em>Studio</em></span>
+  </a>
 
-<nav class="navbar">
-  <div class="logo">TEK<span>LEK</span></div>
-  <ul class="nav-links">
-    <li><a href="#hero">Accueil</a></li>
-    <li><a href="#features">Fonctions</a></li>
-    <li><a href="#colors">Couleurs</a></li>
-    <li><a href="#specs">Specs</a></li>
-    <li><a href="#buy">Acheter</a></li>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#work">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#studio">Studio</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#buy" class="btn btn-small">Commander</a>
+
+  <a href="#contact" class="btn btn-primary nav-cta">Request a Quote</a>
 </nav>
 
-<header id="hero" class="hero">
-  <div class="hero-glow"></div>
+<header id="top" class="hero">
+  <div class="hero-media">
+    <img
+      src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000&auto=format&fit=crop"
+      alt="Modern minimalist concrete architecture building with clean geometric lines"
+      loading="eager"
+    />
+    <div class="hero-scrim"></div>
+  </div>
+
   <div class="hero-content">
-    <p class="tagline">NOUVELLE GÉNÉRATION</p>
-    <h1>TEK LEK <span class="grad">PRO</span></h1>
-    <p class="subtitle">Une immersion sonore totale. Design 3D sculpté, autonomie infinie, silence absolu.</p>
-    <div class="hero-buttons">
-      <a href="#buy" class="btn btn-primary">Découvrir — 79€</a>
-      <a href="#features" class="btn btn-ghost">En savoir plus ↓</a>
+    <p class="eyebrow reveal">New York, NY — Architecture &amp; Interiors</p>
+    <h1 class="reveal">snoop <em>Studio</em></h1>
+    <p class="hero-tagline reveal">Redefining Spaces, Elevating Lifestyle</p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn btn-primary">Request a Quote</a>
+      <a href="#work" class="btn btn-ghost">View Projects ↓</a>
     </div>
   </div>
-  <div id="model-container" class="model-container">
-    <div id="loader" class="loader">Chargement du modèle 3D…</div>
+
+  <div class="hero-scroll">
+    <span></span>
+    <p>Scroll</p>
   </div>
-  <div class="scroll-hint">Glissez pour faire pivoter ↻</div>
 </header>
 
-<section id="features" class="features">
-  <h2 class="section-title">Pensé dans <span class="grad">chaque détail</span></h2>
-  <div class="cards">
-    <div class="card">
-      <div class="icon">🔇</div>
-      <h3>Réduction de bruit active</h3>
-      <p>Annulation intelligente du bruit ambiant jusqu'à -42dB pour une immersion totale.</p>
+<section class="statement">
+  <p class="reveal">Minimal. <span class="accent">Modern.</span> Meaningful.</p>
+  <p class="statement-sub reveal">We design homes, workplaces and public spaces that feel calm, considered
+    and built to last — shaped around how people actually want to live.</p>
+</section>
+
+<section id="work" class="work">
+  <div class="section-head reveal">
+    <p class="eyebrow">Selected Work</p>
+    <h2>Featured Projects</h2>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card reveal">
+      <div class="project-media">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop"
+          alt="The Meridian Residence — modern house with pool and floor-to-ceiling glass"
+          loading="lazy"
+        />
+        <span class="project-tag">Residential</span>
+      </div>
+      <div class="project-info">
+        <h3>The Meridian Residence</h3>
+        <p>Hamptons, NY</p>
+        <a href="#contact" class="project-link">View Project <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-media">
+        <img
+          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1400&auto=format&fit=crop"
+          alt="Hudson Glass Pavilion — modern glass and steel pavilion building"
+          loading="lazy"
+        />
+        <span class="project-tag">Commercial</span>
+      </div>
+      <div class="project-info">
+        <h3>Hudson Glass Pavilion</h3>
+        <p>Tribeca, Manhattan</p>
+        <a href="#contact" class="project-link">View Project <span>→</span></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-media">
+        <img
+          src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1400&auto=format&fit=crop"
+          alt="Skyline Loft Tower — sculptural white modern high-rise building"
+          loading="lazy"
+        />
+        <span class="project-tag">Mixed-Use</span>
+      </div>
+      <div class="project-info">
+        <h3>Skyline Loft Tower</h3>
+        <p>Long Island City, NY</p>
+        <a href="#contact" class="project-link">View Project <span>→</span></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="section-head reveal">
+    <p class="eyebrow">What We Do</p>
+    <h2>Services</h2>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-index">01</span>
+      <h3>Architecture Design</h3>
+      <p>Concept through construction documents — buildings shaped by light, material and site.</p>
     </div>
-    <div class="card">
-      <div class="icon">🔋</div>
-      <h3>36h d'autonomie</h3>
-      <p>Boîtier de charge longue durée + charge rapide sans fil intégrée.</p>
+    <div class="service-card reveal">
+      <span class="service-index">02</span>
+      <h3>Interior Design</h3>
+      <p>Cohesive, livable interiors that carry the same discipline as the architecture around them.</p>
     </div>
-    <div class="card">
-      <div class="icon">💧</div>
-      <h3>Résistant IPX5</h3>
-      <p>Sport, pluie, transpiration — vos écouteurs encaissent tout.</p>
+    <div class="service-card reveal">
+      <span class="service-index">03</span>
+      <h3>Renovation &amp; Additions</h3>
+      <p>Thoughtful transformations of existing homes and buildings without losing their character.</p>
     </div>
-    <div class="card">
-      <div class="icon">🎧</div>
-      <h3>Son Hi-Fi spatial</h3>
-      <p>Audio spatial dynamique avec basses profondes et aigus cristallins.</p>
+    <div class="service-card reveal">
+      <span class="service-index">04</span>
+      <h3>Urban Planning</h3>
+      <p>Site strategy and master planning for developments that respect their neighborhood.</p>
     </div>
-    <div class="card">
-      <div class="icon">⚡</div>
-      <h3>Latence ultra faible</h3>
-      <p>Mode gaming à 45ms pour une synchro parfaite audio/vidéo.</p>
+    <div class="service-card reveal">
+      <span class="service-index">05</span>
+      <h3>Project Management</h3>
+      <p>Hands-on oversight from permitting to final walkthrough, keeping budget and timeline honest.</p>
     </div>
-    <div class="card">
-      <div class="icon">🖐️</div>
-      <h3>Contrôle tactile</h3>
-      <p>Gestes intuitifs pour gérer musique, appels et assistant vocal.</p>
+    <div class="service-card reveal">
+      <span class="service-index">06</span>
+      <h3>Design Consultation</h3>
+      <p>Focused sessions for clients who need expert direction before committing to a full build.</p>
     </div>
   </div>
 </section>
 
-<section id="colors" class="colors">
-  <h2 class="section-title">Choisissez <span class="grad">votre style</span></h2>
-  <p class="section-sub">Faites pivoter le modèle 3D et changez la couleur en direct.</p>
-  <div class="color-swatches">
-    <button class="swatch active" style="--c:#f5f5f7" data-color="#f5f5f7" data-name="Blanc Nuage"></button>
-    <button class="swatch" style="--c:#1c1c1e" data-color="#1c1c1e" data-name="Noir Onyx"></button>
-    <button class="swatch" style="--c:#0a84ff" data-color="#0a84ff" data-name="Bleu Électrique"></button>
-    <button class="swatch" style="--c:#ff375f" data-color="#ff375f" data-name="Rouge Pulse"></button>
-    <button class="swatch" style="--c:#30d158" data-color="#30d158" data-name="Vert Néon"></button>
-    <button class="swatch" style="--c:#bf5af2" data-color="#bf5af2" data-name="Violet Cosmos"></button>
+<section id="studio" class="studio">
+  <div class="studio-media reveal">
+    <img
+      src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1400&auto=format&fit=crop"
+      alt="Modern minimalist house exterior with clean architectural lines"
+      loading="lazy"
+    />
   </div>
-  <p class="color-name" id="color-name">Blanc Nuage</p>
+  <div class="studio-content reveal">
+    <p class="eyebrow">The Studio</p>
+    <h2>Based in New York. Building everywhere it matters.</h2>
+    <p>snoop Studio is a small, independent architecture practice working across residential,
+      commercial and mixed-use projects. We keep our client list intentionally short so every
+      project gets the attention of our full team, from first sketch to final finish.</p>
+    <div class="studio-stats">
+      <div>
+        <strong>12+</strong>
+        <span>Years in practice</span>
+      </div>
+      <div>
+        <strong>60+</strong>
+        <span>Projects delivered</span>
+      </div>
+      <div>
+        <strong>NY</strong>
+        <span>Studio &amp; site work</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="specs" class="specs">
-  <h2 class="section-title">Caractéristiques <span class="grad">techniques</span></h2>
-  <div class="specs-grid">
-    <div class="spec"><span>Bluetooth</span><strong>5.3</strong></div>
-    <div class="spec"><span>Autonomie écouteurs</span><strong>9h</strong></div>
-    <div class="spec"><span>Autonomie boîtier</span><strong>+27h</strong></div>
-    <div class="spec"><span>Charge rapide</span><strong>10min = 2h</strong></div>
-    <div class="spec"><span>Poids</span><strong>4.5g / écouteur</strong></div>
-    <div class="spec"><span>Étanchéité</span><strong>IPX5</strong></div>
-    <div class="spec"><span>Driver</span><strong>11mm dynamique</strong></div>
-    <div class="spec"><span>Connexion</span><strong>Multipoint x2</strong></div>
+<footer id="contact" class="footer">
+  <div class="footer-cta reveal">
+    <h2>Let's design your next space.</h2>
+    <p>Tell us about your project and we'll get back to you within two business days.</p>
+    <a href="mailto:hello@snoopstudio.com" class="btn btn-primary">Request a Quote</a>
   </div>
-</section>
 
-<section id="buy" class="buy">
-  <div class="buy-glow"></div>
-  <h2>Prêt à passer au <span class="grad">niveau supérieur</span> ?</h2>
-  <p>Livraison gratuite • Garantie 2 ans • Retour sous 30 jours</p>
-  <div class="price-box">
-    <span class="old-price">119€</span>
-    <span class="new-price">79€</span>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <a href="#top" class="logo footer-logo">
+        <span class="logo-mark">s.</span>
+        <span class="logo-text">snoop <em>Studio</em></span>
+      </a>
+      <p>Architecture &amp; interior design studio based in New York, NY.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <p>145 Franklin Street<br>New York, NY 10013</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><a href="mailto:hello@snoopstudio.com">hello@snoopstudio.com</a></p>
+      <p><a href="tel:+12125550142">+1 (212) 555-0142</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
   </div>
-  <a href="#" class="btn btn-primary btn-large">Commander maintenant</a>
-</section>
 
-<footer class="footer">
-  <div class="logo">TEK<span>LEK</span></div>
-  <p>© 2026 TEK LEK. Tous droits réservés.</p>
+  <div class="footer-bottom">
+    <p>© 2026 snoop Studio. All rights reserved.</p>
+    <p>Minimal. Modern. Meaningful.</p>
+  </div>
 </footer>
 
-<script type="importmap">
-{
-  "imports": {
-    "three": "./vendor/three/three.module.js",
-    "three/addons/": "./vendor/three/addons/"
-  }
-}
-</script>
-<script type="module" src="scene.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
